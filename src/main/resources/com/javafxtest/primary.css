@@ -1,0 +1,88 @@
+.root * {
+  -text-colour: white;
+  -default-colour: #787c7e;
+  -absent-colour: #3a3a3c;
+  -present-colour: #b59f3b;
+  -correct-colour: #538d4e;
+  -empty-border-colour: -absent-colour;
+  -evaluated-border-colour: -default-colour;
+  -key-colour: -default-colour;
+} 
+
+.animated-gradient {
+  -fx-background-color: linear-gradient(to top right, #121213, #151516);
+  -fx-background-position: left;
+}
+
+.letter {
+  -fx-text-fill: -text-colour;
+  -fx-font-size: 27px;
+  -fx-font-weight: bold;
+}
+
+.tile {
+  -fx-border-width: 2px; 
+  -fx-border-color: -empty-border-colour;
+}
+
+.key {
+  -fx-font-size: 17px;
+  -fx-font-weight: bold;
+  -fx-background-color: -key-colour;
+  -fx-text-fill: -text-colour;
+  -fx-background-radius: 6;
+}
+
+.key:empty,
+.tile:empty {
+  -fx-background-color: transparent;
+  -fx-border-color: -empty-border-colour;
+}
+
+.key:evaluated,
+.tile:evaluated {
+  -fx-background-color: transparent;
+  -fx-border-color: -evaluated-border-colour;
+}
+
+.key:absent,
+.tile:absent {
+  -fx-background-color: -absent-colour;
+  -text-fill-colour: -text-colour;
+}
+.tile:absent {
+  -fx-border-color: -absent-colour;
+}
+
+.key:present,
+.tile:present {
+  -fx-background-color: -present-colour;
+  -text-fill-colour: -text-colour;
+}
+.tile:present {
+  -fx-border-color: -present-colour;
+}
+
+.key:correct,
+.tile:correct {
+  -fx-background-color: -correct-colour;
+  -text-fill-colour: -text-colour;
+} 
+.tile:correct {
+  -fx-border-color: -correct-colour;
+} 
+
+.key .ikonli-font-icon {
+  -fx-icon-color: -text-colour;
+  -fx-icon-size: 27px;
+}
+
+.popup {
+  -fx-background-color: -default-colour;
+  /* -fx-padding: 10; */
+  -fx-text-fill: -text-colour;
+  -fx-font-size: 16;
+  -fx-font-weight: bold;
+  -fx-background-radius: 10px;
+  -fx-padding: 15px 20px 15px 20px;
+}
